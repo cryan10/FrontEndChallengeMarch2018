@@ -41,6 +41,27 @@
   font-weight:300;
 }
 
+.carouselCaptionMobile{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: absolute;
+  bottom: 15%;
+  z-index: 10;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.623);
+  width:100% !important;  
+}
+
+.carouselCaptionMobile h3{
+  font-size:26px;
+}
+
+.carouselCaptionMobile p{
+  font-size:18px;
+  font-weight:300;
+}
+
 .carouselButton{
   background-color:rgb(224, 164, 12);
   color:black;
@@ -76,8 +97,8 @@
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  width:48px !important;
-  height:48px !important;
+  width:32px !important;
+  height:32px !important;
 }
 
 .navbar{
@@ -106,6 +127,51 @@
   padding-top:3px;
 }
 
+/*Search bar inactive styling*/
+.navbar input[type=text]{
+  background: rgb(102, 101, 101);
+  color: rgb(255, 255, 255);
+  border:0;
+  font-family: Roboto, sans-serif;
+  font-size:18px;
+  font-weight: 300 !important;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:10px;
+}
+
+.navbar input[type=text]::placeholder{
+  color: rgb(218, 218, 218);
+  font-family: Roboto, sans-serif;
+  font-size:18px;
+  font-weight: 300 !important;
+}
+
+/*Search bar autofill styling*/
+.autocomplete-suggestions {
+  border: 1px solid #999; 
+  background: white; 
+  font-family: Roboto, sans-serif;
+  color:rgb(150, 150, 150);
+  overflow: auto; 
+  cursor:default;
+}
+
+.autocomplete-suggestion { 
+  padding: 5px 5px; 
+  font-size: 1.2em; 
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+
+.autocomplete-selected { 
+  background: #f0f0f0; 
+}
+.autocomplete-suggestions strong { 
+  font-weight: normal; 
+  color: rgb(39, 39, 39); 
+}
+
 .carousel-indicators li {
   height:18px;
   width:18px;
@@ -122,24 +188,7 @@
   border: 2px solid white;
 }
 
-.navbar input[type=text]{
-  background: rgb(102, 101, 101);
-  color: rgb(255, 255, 255);
-  border:0;
-  font-family: Roboto, sans-serif;
-  font-size:18px;
-  font-weight: 300 !important;
-  padding-top:5px;
-  padding-bottom:5px;
-  padding-left:10px;
-}
 
-.navbar input[type=text]::placeholder{
-  color: rgb(194, 192, 192);
-  font-family: Roboto, sans-serif;
-  font-size:18px;
-  font-weight: 300 !important;
-}
 
 
 .infoRows h4{
@@ -179,14 +228,14 @@
 
 
 /* Style the tab */
-.tab {
+#horizontalTabs {
   float: left;
   width: 30%;
   height: 300px;
 }
 
 /* Style the buttons inside the tab */
-.tab button {
+#horizontalTabs button {
   display: block;
   background-color:rgb(226, 226, 226);
   color: black;
@@ -204,17 +253,17 @@
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+#horizontalTabs button:hover {
   background-color:rgb(243, 243, 243);
 }
 
 /* Create an active/current "tab button" class */
-.tab button.active {
+#horizontalTabs button.active {
   background-color:rgb(255, 187, 14);
 }
 
 /* Style the tab content */
-.tabcontent {
+#efficiency, #sustainability, #doingGood {
   float: left;
   padding: 12px 12px;
   border: 5px solid rgb(255, 187, 14);
@@ -227,9 +276,43 @@
   word-wrap: break-word;
 }
 
+#mobileEfficiency, #mobileSustainability, #mobileDoingGood {
+  border: 5px solid rgb(255, 187, 14);
+  border-radius:0px 4px 4px 4px;
+  font-family: Roboto, sans-serif;
+  color: rgb(126, 126, 126);
+  font-size:14px;
+  padding:5px;
+}
+
+#mobileTabs button {
+  background-color:rgb(226, 226, 226);
+  color: black;
+  font-weight:600;
+  font-family: Roboto, sans-serif;
+  border: none;
+  outline: none;
+  text-align: left;
+  transition: 0.3s;
+  font-size: 16px;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+#mobileTabs button:hover {
+  background-color:rgb(243, 243, 243);
+}
+
+#mobileTabs button.active {
+  background-color:rgb(255, 187, 14);
+}
+
+.active{
+  background-color:rgb(255, 187, 14);
+}
+
 footer{
   border-top:5px solid  rgb(126, 126, 126) !important;
-
 }
 
 .bg-dark{
@@ -238,6 +321,7 @@ footer{
 
 footer h6, a{
   font-size:13px;
+  padding-top:15px;
   color:white !important;
   font-family:Roboto, sans-serif;
 }
@@ -253,8 +337,34 @@ footer a:hover{
   color:rgb(255, 187, 14) !important;
 }
 
-.copyright{
+footer .copyright{
   font-family:Roboto, sans-serif;
   color:rgb(255, 187, 14);
   font-size:20px;
+}
+
+
+/*Modal Styling*/
+.modal-title{
+  text-transform: uppercase !important;
+  font-size:28px !important;
+}
+
+.modal-header{
+  border-color:white;
+  padding-bottom:5px;
+}
+
+.modal-body{
+  padding-bottom:50px; 
+}
+
+#cityModalTitle{
+  padding-bottom:15px;
+}
+
+iframe {
+  margin: 0 auto;
+  display:block;
+  box-shadow: 1px 1px 1px rgb(196, 196, 196); 
 }

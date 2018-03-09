@@ -16,12 +16,18 @@
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <!--Scripts for search bar-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="vendor/jquery/jquery.autocomplete.min.js"></script>
+  <script type="text/javascript" src="vendor/jquery/location-autocomplete.js"></script>
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-none d-sm-block">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="assets/logo.png" id="navbarLogo" />Omni Consumer Products</a>
@@ -38,14 +44,43 @@
             <a class="nav-link navbarLinks" href="#">Products</a>
           </li>
           <li class="nav-item" id="searchBar">
-            <input type="text" placeholder="Find a location...">
+            <form>
+              <input type="text" id="autocomplete" placeholder="Find a location...">
+            </form>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header>
+  <!--Navigation for mobile phones-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-block d-sm-block d-md-block d-lg-none">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo.png" id="navbarLogo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarXsResponsive" aria-controls="navbarXsResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarXsResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link navbarLinks" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbarLinks" href="#">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbarLinks" href="#">Find a Location</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <header class="d-none d-sm-block">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <br>
       <ol class="carousel-indicators">
@@ -56,7 +91,7 @@
       <div class="carousel-inner" role="listbox">
         <!-- Slide One -->
         <div class="carousel-item active" style="background-image: url('assets/slide1.jpg')">
-          <div class="carouselCaption d-none d-md-block">
+          <div class="carouselCaption">
             <h3>Announcing Delta City</h3>
             <p>We're transforming Detroit into an efficient, clean, harmonious city.</p>
             <button type="button" class="btn btn-primary carouselButton">LEARN MORE</button>
@@ -64,7 +99,7 @@
         </div>
         <!-- Slide Two -->
         <div class="carousel-item" style="background-image: url('assets/slide2.jpg')">
-          <div class="carouselCaption d-none d-md-block">
+          <div class="carouselCaption">
             <h3>Introducing Our Latest Deforestation Technology</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor.</p>
             <br>
@@ -73,7 +108,7 @@
         </div>
         <!-- Slide Three -->
         <div class="carousel-item" style="background-image: url('assets/slide3.jpg')">
-          <div class="carouselCaption d-none d-md-block">
+          <div class="carouselCaption">
             <h3>OCP Starts New Deep Space Mining Program</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor.</p>
             <br>
@@ -89,6 +124,46 @@
         <span class="carousel-control-next-icon carouselControlIcons" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+    </div>
+  </header>
+
+  <!--Header for mobile phones-->
+  <header class="d-block d-sm-none">
+    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+      <br>
+      <ol class="carousel-indicators">
+        <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One -->
+        <div class="carousel-item active" style="background-image: url('assets/slide1.jpg')">
+          <div class="carouselCaptionMobile">
+            <h3>Announcing Delta City</h3>
+            <p>We're transforming Detroit into an efficient, clean, harmonious city.</p>
+            <button type="button" class="btn btn-primary carouselButton">LEARN MORE</button>
+          </div>
+        </div>
+        <!-- Slide Two -->
+        <div class="carousel-item" style="background-image: url('assets/slide2.jpg')">
+          <div class="carouselCaptionMobile">
+            <h3>Introducing Our Latest Deforestation Technology</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor.</p>
+            <br>
+            <br>
+          </div>
+        </div>
+        <!-- Slide Three -->
+        <div class="carousel-item" style="background-image: url('assets/slide3.jpg')">
+          <div class="carouselCaptionMobile">
+            <h3>OCP Starts New Deep Space Mining Program</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor.</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -130,19 +205,19 @@
     </div>
   </section>
 
-  <section class="py-5">
+  <section class="py-5 d-none d-sm-block">
     <div class="container">
       <h2 class="text-center" style="padding-bottom:60px">Doing good, one product at a time.</h2>
       <div class="row" style="padding-bottom:40px">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-          <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Efficiency</button>
-            <button class="tablinks" onclick="openCity(event, 'Paris')">Sustainability</button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Doing Good</button>
+          <div class="tab" id="horizontalTabs">
+            <button class="tablinks" onclick="openValue(event, 'efficiency')" id="defaultOpen">Efficiency</button>
+            <button class="tablinks" onclick="openValue(event, 'sustainability')">Sustainability</button>
+            <button class="tablinks" onclick="openValue(event, 'doingGood')">Doing Good</button>
           </div>
 
-          <div id="London" class="tabcontent">
+          <div id="efficiency" class="tabcontent">
             <p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for
               real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
             <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one
@@ -152,7 +227,7 @@
               after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
           </div>
 
-          <div id="Paris" class="tabcontent">
+          <div id="sustainability" class="tabcontent">
             <p>Aenean pharetra risus quis placerat euismod. Praesent mattis lorem eget massa euismod sollicitudin. Donec porta
               nulla ut blandit vehicula. Mauris sagittis lorem nec mauris placerat, et molestie elit vehicula. Donec libero
               ex, condimentum et mi dapibus, euismod ornare ligula.</p>
@@ -163,7 +238,7 @@
               tincidunt enim. Duis iaculis sodales lectus vitae cursus.</p>
           </div>
 
-          <div id="Tokyo" class="tabcontent">
+          <div id="doingGood" class="tabcontent">
             <p>Aenean pharetra risus quis placerat euismod. Praesent mattis lorem eget massa euismod sollicitudin. Donec porta
               nulla ut blandit vehicula. Mauris sagittis lorem nec mauris placerat, et molestie elit vehicula. Donec libero
               ex, condimentum et mi dapibus, euismod ornare ligula.</p>
@@ -176,57 +251,134 @@
       </div>
   </section>
 
+  <!--Tabs for mobile phones-->
+  <section class="py-5 d-block d-sm-none" id="mobileTabs" style="padding-bottom:80px">
+    <div class="container">
+      <h2 class="text-center" style="padding-bottom:60px">Doing good, one product at a time.</h2>
+      <div class="row" style="padding-bottom:40px">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="tab">
+            <button class="tablinks" onclick="openValue(event, 'mobileEfficiency')" id="mobileDefaultOpen">Efficiency</button>
+            <button class="tablinks" onclick="openValue(event, 'mobileSustainability')">Sustainability</button>
+            <button class="tablinks" onclick="openValue(event, 'mobileDoingGood')">Doing Good</button>
+          </div>
+
+          <div id="mobileEfficiency" class="tabcontent">
+            <p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for
+              real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
+            <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one
+              customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the
+              art customer service.</p>
+            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users
+              after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+          </div>
+
+          <div id="mobileSustainability" class="tabcontent">
+            <p>Aenean pharetra risus quis placerat euismod. Praesent mattis lorem eget massa euismod sollicitudin. Donec porta
+              nulla ut blandit vehicula. Mauris sagittis lorem nec mauris placerat, et molestie elit vehicula. Donec libero
+              ex, condimentum et mi dapibus, euismod ornare ligula.</p>
+
+            <p>In faucibus tempus ante, et tempor magna luctus id. Ut a maximus ipsum. Duis eu velit nec libero pretium pellentesque.
+              Maecenas auctor hendrerit pulvinar. Donec sed tortor interdum, sodales elit vel, tempor turpis. In tristique
+              vestibulum eros vel congue. Vivamus maximus posuere fringilla. Nullam in est commodo, tristique ligula eu,
+              tincidunt enim. Duis iaculis sodales lectus vitae cursus.</p>
+          </div>
+
+          <div id="mobileDoingGood" class="tabcontent">
+            <p>Aenean pharetra risus quis placerat euismod. Praesent mattis lorem eget massa euismod sollicitudin. Donec porta
+              nulla ut blandit vehicula. Mauris sagittis lorem nec mauris placerat, et molestie elit vehicula. Donec libero
+              ex, condimentum et mi dapibus, euismod ornare ligula.</p>
+
+            <p>In faucibus tempus ante, et tempor magna luctus id. Ut a maximus ipsum. Duis eu velit nec libero pretium pellentesque.
+              Maecenas auctor hendrerit pulvinar.</p>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+  </section>
+
+  <!--Modal for search bar-->
+  <div class="modal" id="outputbox" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" id="modalCloseButton" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center" id="cityModalTitle">
+            <h5 class="modal-title" id="outputCity"></h5>
+            <hr class="yellowHr">
+          </div>
+          <p id="outputAddress">There are currently no locations in this city.</p>
+          <p id="outputPhone">There is no phone number listed for this location.</p>
+          <br>
+          <iframe id="outputmap" src="" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
-          <h6><u>Products</u></h6>
-            <a href="#">Cyborgs</a>
-            <br>
-            <a href="#">Space Ships</a>
-            <br>
-            <a href="#">Weapons</a>
-            <br>
-            <a href="#">Personal Hygiene</a>
-            <br>
-            <a href="#">Lab-Grown Food</a>
+        <div class="col-sm-3 col-xs-6">
+          <h6>
+            <u>Products</u>
+          </h6>
+          <a href="#">Cyborgs</a>
+          <br>
+          <a href="#">Space Ships</a>
+          <br>
+          <a href="#">Weapons</a>
+          <br>
+          <a href="#">Personal Hygiene</a>
+          <br>
+          <a href="#">Lab-Grown Food</a>
         </div>
-        <div class="col-md-3">
-            <h6><u>Services</u></h6>
-            <a href="#">Hospitals</a>
-            <br>
-            <a href="#">Police Force</a>
-            <br>
-            <a href="#">Internet</a>
-            <br>
-            <a href="#">Private Military</a>
+        <div class="col-sm-3 col-xs-6">
+          <h6>
+            <u>Services</u>
+          </h6>
+          <a href="#">Hospitals</a>
+          <br>
+          <a href="#">Police Force</a>
+          <br>
+          <a href="#">Internet</a>
+          <br>
+          <a href="#">Private Military</a>
         </div>
-        <div class="col-md-3">
-            <h6><u>Legal</u></h6>
-            <a href="#">Terms of Service</a>
-            <br>
-            <a href="#">Privacy Policy</a>
-            <br>
-            <a href="#">Report a Violation</a>
-            <br>
-            <a href="#">Contact Us</a>
+        <div class="col-sm-3">
+          <h6>
+            <u>Legal</u>
+          </h6>
+          <a href="#">Terms of Service</a>
+          <br>
+          <a href="#">Privacy Policy</a>
+          <br>
+          <a href="#">Report a Violation</a>
+          <br>
+          <a href="#">Contact Us</a>
         </div>
-        <div class="col-md-3">
-          <p>Copyright 2041, OCP Inc.<br>All rights reserved.</p>
+        <div class="col-sm-3">
+          <p>Copyright 2041, OCP Inc.
+            <br>All rights reserved.</p>
         </div>
       </div>
-      <p class="m-0 text-center copyright">OCP: The <i>only</i> choice for your consumer needs. <sup>TM</sup></p>
+      <p class="m-0 text-center copyright">OCP: The
+        <i>only</i> choice for your consumer needs.
+        <sup>TM</sup>
+      </p>
     </div>
     <!-- /.container -->
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <!-- Values animated section -->
   <script>
-    function openCity(evt, cityName) {
+    function openValue(evt, valueName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
@@ -236,12 +388,20 @@
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
-      document.getElementById(cityName).style.display = "block";
+      document.getElementById(valueName).style.display = "block";
       evt.currentTarget.className += " active";
     }
 
-    // Get the element with id="defaultOpen" and click on it
+    // Get the element with id="defaultOpen" and click on 
+
+    if ($(window).width() < 576) {
+      $('#mobileEfficiency').show();
+      document.getElementById("mobileDefaultOpen").click();
+    }
+    else{
     document.getElementById("defaultOpen").click();
+    }
+
   </script>
 
 </body>
