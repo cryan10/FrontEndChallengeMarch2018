@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Omni Consumer Products</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo.png" id="navbarLogo" />Omni Consumer Products</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link navbarLinks" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbarLinks" href="#">Products</a>
+          </li>
+          <li class="nav-item" id="searchBar">
+            <input type="text" placeholder="Find a location...">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <br>
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One -->
+        <div class="carousel-item active" style="background-image: url('assets/slide1.jpg')">
+          <div class="carouselCaption d-none d-md-block">
+            <h3>Announcing Delta City</h3>
+            <p>We're transforming Detroit into an efficient, clean, harmonious city.</p>
+            <button type="button" class="btn btn-primary carouselButton">LEARN MORE</button>
+          </div>
+        </div>
+        <!-- Slide Two -->
+        <div class="carousel-item" style="background-image: url('assets/slide2.jpg')">
+          <div class="carouselCaption d-none d-md-block">
+            <h3>Introducing Our Latest Deforestation Technology</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor.</p>
+            <br>
+            <br>
+          </div>
+        </div>
+        <!-- Slide Three -->
+        <div class="carousel-item" style="background-image: url('assets/slide3.jpg')">
+          <div class="carouselCaption d-none d-md-block">
+            <h3>OCP Starts New Deep Space Mining Program</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor.</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon carouselControlIcons" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon carouselControlIcons" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row infoRows">
+        <div class="col-lg-3 col-md-6">
+          <h4>Lowe Technologies</h4>
+          <hr class="yellowHr">
+          <p>Lorem ipsum leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches
+            to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow
+            the holistic world view of disruptive innovation via workplace diversity.</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4>Mediabreak</h4>
+          <hr class="yellowHr">
+          <p>Lorem ipsum podcasting operational change management inside of workflows to establish a framework. Taking seamless
+            key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a
+            deep dive on the start-up mentality to derive convergence.</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4>Security Concepts</h4>
+          <hr class="yellowHr">
+          <p>Lorem ipsum capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override
+            the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information
+            highway will close the loop on focusing solely on the bottom line.</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4>Urban Rehabilitators</h4>
+          <hr class="yellowHr">
+          <p>Lorem ipsum collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate
+            B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary
+            ROI.
+          </p>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center" style="padding-bottom:60px">Doing good, one product at a time.</h2>
+      <div class="row" style="padding-bottom:40px">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Efficiency</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Sustainability</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Doing Good</button>
+          </div>
+
+          <div id="London" class="tabcontent">
+            <p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for
+              real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
+            <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one
+              customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the
+              art customer service.</p>
+            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users
+              after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+          </div>
+
+          <div id="Paris" class="tabcontent">
+            <p>Aenean pharetra risus quis placerat euismod. Praesent mattis lorem eget massa euismod sollicitudin. Donec porta
+              nulla ut blandit vehicula. Mauris sagittis lorem nec mauris placerat, et molestie elit vehicula. Donec libero
+              ex, condimentum et mi dapibus, euismod ornare ligula.</p>
+
+            <p>In faucibus tempus ante, et tempor magna luctus id. Ut a maximus ipsum. Duis eu velit nec libero pretium pellentesque.
+              Maecenas auctor hendrerit pulvinar. Donec sed tortor interdum, sodales elit vel, tempor turpis. In tristique
+              vestibulum eros vel congue. Vivamus maximus posuere fringilla. Nullam in est commodo, tristique ligula eu,
+              tincidunt enim. Duis iaculis sodales lectus vitae cursus.</p>
+          </div>
+
+          <div id="Tokyo" class="tabcontent">
+            <p>Aenean pharetra risus quis placerat euismod. Praesent mattis lorem eget massa euismod sollicitudin. Donec porta
+              nulla ut blandit vehicula. Mauris sagittis lorem nec mauris placerat, et molestie elit vehicula. Donec libero
+              ex, condimentum et mi dapibus, euismod ornare ligula.</p>
+
+            <p>In faucibus tempus ante, et tempor magna luctus id. Ut a maximus ipsum. Duis eu velit nec libero pretium pellentesque.
+              Maecenas auctor hendrerit pulvinar.</p>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h6><u>Products</u></h6>
+            <a href="#">Cyborgs</a>
+            <br>
+            <a href="#">Space Ships</a>
+            <br>
+            <a href="#">Weapons</a>
+            <br>
+            <a href="#">Personal Hygiene</a>
+            <br>
+            <a href="#">Lab-Grown Food</a>
+        </div>
+        <div class="col-md-3">
+            <h6><u>Services</u></h6>
+            <a href="#">Hospitals</a>
+            <br>
+            <a href="#">Police Force</a>
+            <br>
+            <a href="#">Internet</a>
+            <br>
+            <a href="#">Private Military</a>
+        </div>
+        <div class="col-md-3">
+            <h6><u>Legal</u></h6>
+            <a href="#">Terms of Service</a>
+            <br>
+            <a href="#">Privacy Policy</a>
+            <br>
+            <a href="#">Report a Violation</a>
+            <br>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col-md-3">
+          <p>Copyright 2041, OCP Inc.<br>All rights reserved.</p>
+        </div>
+      </div>
+      <p class="m-0 text-center copyright">OCP: The <i>only</i> choice for your consumer needs. <sup>TM</sup></p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+</body>
+
+</html>
