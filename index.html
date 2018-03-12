@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="Carrie Ryan">
 
   <title>Omni Consumer Products</title>
 
@@ -17,7 +17,7 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-  <!--Scripts for search bar-->
+  <!-- Scripts for location search bar -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="vendor/jquery/jquery.autocomplete.min.js"></script>
@@ -26,7 +26,7 @@
 
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation for desktop/tablet -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-none d-sm-block">
     <div class="container">
       <a class="navbar-brand" href="#">
@@ -53,7 +53,7 @@
     </div>
   </nav>
 
-  <!--Navigation for mobile phones-->
+  <!-- Navigation for mobile phone -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-block d-sm-block d-md-block d-lg-none">
     <div class="container">
       <a class="navbar-brand" href="#">
@@ -80,6 +80,7 @@
   </nav>
 
 
+  <!-- Header image carousel for desktop/tablet -->
   <header class="d-none d-sm-block">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <br>
@@ -94,7 +95,7 @@
           <div class="carouselCaption">
             <h3>Announcing Delta City</h3>
             <p>We're transforming Detroit into an efficient, clean, harmonious city.</p>
-            <button type="button" class="btn btn-primary carouselButton">LEARN MORE</button>
+            <a href="https://en.wikipedia.org/wiki/Cleveland" target="_blank"><button type="button" class="btn btn-primary carouselButton">LEARN MORE</button></a>
           </div>
         </div>
         <!-- Slide Two -->
@@ -127,7 +128,7 @@
     </div>
   </header>
 
-  <!--Header for mobile phones-->
+  <!-- Header image carousel for mobile phone -->
   <header class="d-block d-sm-none">
     <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
       <br>
@@ -142,7 +143,7 @@
           <div class="carouselCaptionMobile">
             <h3>Announcing Delta City</h3>
             <p>We're transforming Detroit into an efficient, clean, harmonious city.</p>
-            <button type="button" class="btn btn-primary carouselButton">LEARN MORE</button>
+            <a href="https://en.wikipedia.org/wiki/Cleveland" target="_blank"><button type="button" class="btn btn-primary carouselButton">LEARN MORE</button></a>
           </div>
         </div>
         <!-- Slide Two -->
@@ -167,7 +168,7 @@
     </div>
   </header>
 
-  <!-- Page Content -->
+  <!-- Company Services section -->
   <section class="py-5">
     <div class="container">
       <div class="row infoRows">
@@ -205,6 +206,7 @@
     </div>
   </section>
 
+  <!-- Company Values tabs for desktop/tablet -->
   <section class="py-5 d-none d-sm-block">
     <div class="container">
       <h2 class="text-center" style="padding-bottom:60px">Doing good, one product at a time.</h2>
@@ -251,7 +253,7 @@
       </div>
   </section>
 
-  <!--Tabs for mobile phones-->
+  <!-- Company Values tabs for mobile phone -->
   <section class="py-5 d-block d-sm-none" id="mobileTabs" style="padding-bottom:80px">
     <div class="container">
       <h2 class="text-center" style="padding-bottom:60px">Doing good, one product at a time.</h2>
@@ -298,7 +300,7 @@
       </div>
   </section>
 
-  <!--Modal for search bar-->
+  <!-- Modal for location search -->
   <div class="modal" id="outputbox" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -373,10 +375,9 @@
         <sup>TM</sup>
       </p>
     </div>
-    <!-- /.container -->
   </footer>
 
-  <!-- Values animated section -->
+  <!-- Company Values animated section -->
   <script>
     function openValue(evt, valueName) {
       var i, tabcontent, tablinks;
@@ -392,8 +393,7 @@
       evt.currentTarget.className += " active";
     }
 
-    // Get the element with id="defaultOpen" and click on 
-
+    // Opens the first tab on page load depending on screen size.
     if ($(window).width() < 576) {
       $('#mobileEfficiency').show();
       document.getElementById("mobileDefaultOpen").click();

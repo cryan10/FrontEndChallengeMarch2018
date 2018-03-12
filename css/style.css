@@ -1,11 +1,87 @@
-/*!
- * Start Bootstrap - Half Slider (https://startbootstrap.com/template-overviews/half-slider)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-half-slider/blob/master/LICENSE)
- */
+.active{
+  background-color:rgb(255, 187, 14);
+}
+
+.bg-dark{
+  background-color:black !important;
+}
 
 
+/* Navbar styling */
+.navbar{
+  background-color:black !important;
+  font-weight: 500;
+  padding-top: 25px;
+  padding-bottom:25px;
+}
 
+#navbarLogo{
+  padding-right: 18px;
+}
+
+.navbar-brand{
+  font-size: 32px;
+}
+
+.navbarLinks{
+  font-size:18px;
+  color: white !important;
+  padding-right:25px !important;
+}
+
+#searchBar{
+  padding-top:3px;
+}
+
+/*Search bar inactive styling*/
+.navbar input[type=text]{
+  background: rgb(102, 101, 101);
+  color: rgb(255, 255, 255);
+  border:0;
+  font-family: Roboto, sans-serif;
+  font-size:18px;
+  font-weight: 300 !important;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:10px;
+}
+
+.navbar input[type=text]::placeholder{
+  color: rgb(218, 218, 218);
+  font-family: Roboto, sans-serif;
+  font-size:18px;
+  font-weight: 300 !important;
+}
+
+/*Search bar autofill suggestion styling*/
+.autocomplete-suggestions {
+  border: 1px solid #999; 
+  background: white; 
+  font-family: Roboto, sans-serif;
+  color:rgb(150, 150, 150);
+  overflow: auto; 
+  cursor:default;
+}
+
+.autocomplete-suggestion { 
+  padding: 5px 5px; 
+  font-size: 1.2em; 
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+
+.autocomplete-selected { 
+  background: #f0f0f0; 
+}
+
+.autocomplete-suggestions strong { 
+  font-weight: normal; 
+  color: rgb(39, 39, 39); 
+}
+/* END Navbar styling*/
+
+
+/* Carousel styling */
 .carousel-item {
   height: 80vh;
   min-height: 300px;
@@ -14,13 +90,10 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-color:black !important;
 }
 
 .carouselCaption{
-  /*position: absolute;
-  display:block;
-  bottom: 80px;
-  z-index: 10;*/
   padding-top: 10px;
   padding-bottom: 60px;
   position: absolute;
@@ -101,77 +174,6 @@
   height:32px !important;
 }
 
-.navbar{
-  background-color:black !important;
-  font-weight: 500;
-  padding-top: 25px;
-  padding-bottom:25px;
-}
-
-#navbarLogo{
-  /*width: 20%;*/
-  padding-right: 18px;
-}
-
-.navbar-brand{
-  font-size: 32px;
-}
-
-.navbarLinks{
-  font-size:18px;
-  color: white !important;
-  padding-right:25px !important;
-}
-
-#searchBar{
-  padding-top:3px;
-}
-
-/*Search bar inactive styling*/
-.navbar input[type=text]{
-  background: rgb(102, 101, 101);
-  color: rgb(255, 255, 255);
-  border:0;
-  font-family: Roboto, sans-serif;
-  font-size:18px;
-  font-weight: 300 !important;
-  padding-top:5px;
-  padding-bottom:5px;
-  padding-left:10px;
-}
-
-.navbar input[type=text]::placeholder{
-  color: rgb(218, 218, 218);
-  font-family: Roboto, sans-serif;
-  font-size:18px;
-  font-weight: 300 !important;
-}
-
-/*Search bar autofill styling*/
-.autocomplete-suggestions {
-  border: 1px solid #999; 
-  background: white; 
-  font-family: Roboto, sans-serif;
-  color:rgb(150, 150, 150);
-  overflow: auto; 
-  cursor:default;
-}
-
-.autocomplete-suggestion { 
-  padding: 5px 5px; 
-  font-size: 1.2em; 
-  white-space: nowrap; 
-  overflow: hidden; 
-}
-
-.autocomplete-selected { 
-  background: #f0f0f0; 
-}
-.autocomplete-suggestions strong { 
-  font-weight: normal; 
-  color: rgb(39, 39, 39); 
-}
-
 .carousel-indicators li {
   height:18px;
   width:18px;
@@ -187,10 +189,10 @@
   background-color:white !important;
   border: 2px solid white;
 }
+/* END Carousel styling */
 
 
-
-
+/* Services section styling*/
 .infoRows h4{
   text-align:center;
 }
@@ -206,9 +208,11 @@
   width: 130px;
   background-color:rgb(255, 206, 72);
 }
+/*END Services section styling*/
 
-/*Accordion-type info section*/
 
+/* Company Values section styling */
+/* Desktop/tablet styling */
 .btn-group-vertical{
   background-color:rgb(156, 156, 156);
   border-radius:0 !important;
@@ -223,18 +227,14 @@
   border-radius:0 !important;
   font-weight:600;
   color:black !important;
-
 }
 
-
-/* Style the tab */
 #horizontalTabs {
   float: left;
   width: 30%;
   height: 300px;
 }
 
-/* Style the buttons inside the tab */
 #horizontalTabs button {
   display: block;
   background-color:rgb(226, 226, 226);
@@ -252,17 +252,14 @@
   margin-bottom:5px;
 }
 
-/* Change background color of buttons on hover */
 #horizontalTabs button:hover {
   background-color:rgb(243, 243, 243);
 }
 
-/* Create an active/current "tab button" class */
 #horizontalTabs button.active {
   background-color:rgb(255, 187, 14);
 }
 
-/* Style the tab content */
 #efficiency, #sustainability, #doingGood {
   float: left;
   padding: 12px 12px;
@@ -276,6 +273,7 @@
   word-wrap: break-word;
 }
 
+/* Mobile phone styling */
 #mobileEfficiency, #mobileSustainability, #mobileDoingGood {
   border: 5px solid rgb(255, 187, 14);
   border-radius:0px 4px 4px 4px;
@@ -306,17 +304,12 @@
 #mobileTabs button.active {
   background-color:rgb(255, 187, 14);
 }
+/* END Company Values section styling */
 
-.active{
-  background-color:rgb(255, 187, 14);
-}
 
+/* Footer styling */
 footer{
   border-top:5px solid  rgb(126, 126, 126) !important;
-}
-
-.bg-dark{
-  background-color:black !important;
 }
 
 footer h6, a{
@@ -342,9 +335,10 @@ footer .copyright{
   color:rgb(255, 187, 14);
   font-size:20px;
 }
+/* END footer styling */
 
 
-/*Modal Styling*/
+/* Modal styling */
 .modal-title{
   text-transform: uppercase !important;
   font-size:28px !important;
@@ -368,3 +362,4 @@ iframe {
   display:block;
   box-shadow: 1px 1px 1px rgb(196, 196, 196); 
 }
+/* END modal styling */
